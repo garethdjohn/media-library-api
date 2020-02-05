@@ -1,0 +1,53 @@
+{
+    "name": "media-library-api",
+    "version": "1.0.0",
+    "description": "Backend API for the Media Library",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/GarethDJohn/media-library-api"
+    },
+    "author": "Gareth John",
+    "license": "MIT",
+    "scripts": {
+        "start": "npm run serve",
+        "build": "npm run build-ts && npm run lint",
+        "serve": "node dist/server.js",
+        "test": "jest --forceExit --coverage --verbose --detectOpenHandles --passWithNoTests",
+        "build-ts": "tsc",
+        "watch-ts": "tsc -w",
+        "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix"
+    },
+    "dependencies": {
+        "@types/cors": "^2.8.6",
+        "@types/http-errors": "^1.6.3",
+        "@types/morgan": "^1.7.37",
+        "body-parser": "^1.19.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "errorhandler": "^1.5.1",
+        "express": "^4.17.1",
+        "mongoose": "^5.7.1",
+        "morgan": "^1.9.1",
+        "music-metadata": "^6.3.3",
+        "winston": "^3.2.1"
+    },
+    "devDependencies": {
+        "@types/body-parser": "^1.17.1",
+        "@types/chai": "^4.2.3",
+        "@types/errorhandler": "^0.0.32",
+        "@types/eslint": "^6.1.1",
+        "@types/express": "^4.17.1",
+        "@types/jest": "^24.0.23",
+        "@types/mongoose": "^5.5.18",
+        "@types/node": "^12.7.8",
+        "@types/supertest": "^2.0.8",
+        "@types/winston": "^2.4.4",
+        "chai": "^4.2.0",
+        "eslint": "^6.4.0",
+        "jest": "^24.9.0",
+        "supertest": "^4.0.2",
+        "ts-jest": "^24.1.0",
+        "ts-node": "^8.4.1",
+        "typescript": "^3.6.3"
+    }
+}
