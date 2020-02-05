@@ -9,6 +9,11 @@ jobs:
 
     steps:
       - checkout
+      - run:
+          name: "Set up custom environment variables"
+          command: |
+            echo "export MONGODB_URI=mongodb://localhost:27017/media-library" >> $BASH_ENV
+            echo "export NODE_ENV=development" >> $BASH_ENV
 
       # Download and cache dependencies
       - restore_cache:
